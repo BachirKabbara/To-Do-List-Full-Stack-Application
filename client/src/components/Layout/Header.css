@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+.header {
+  background: linear-gradient(to right, #FF4B2B, #FF416C); /* Gradient similar to login */
+  color: #FFFFFF; /* White text */
+  padding: 10px 20px;
+  display: flex;
+  z-index: 1000; /* Ensures header is on top */ 
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25); /* Subtle shadow for depth */
+}
+
+
+.header-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800; /* Bold font for the title */
+  font-size: 24px;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF; /* White text links */
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    display: flex; /* Ensures icon and text are aligned */
+    align-items: center; /* Center alignment of text and icon */
+  }
+  
+  .nav-link i {
+    margin-right: 8px; /* Space between icon and text */
+  }
+  

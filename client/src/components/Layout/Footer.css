@@ -1,0 +1,121 @@
+footer {
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0 0;
+    z-index: 1000;
+    margin-top: auto;
+    width: 100%;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 0px 0;
+}
+
+.social-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+    border-radius: 50%;
+    background: #fff;
+    color: inherit;
+    transition: all 0.3s;
+}
+
+.social-button:focus,
+.social-button:hover {
+    color: #fff;
+}
+
+.social-button::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.social-button:focus::after,
+.social-button:hover::after {
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    margin-left: calc(-50% - 1px);
+}
+
+.social-button i {
+    font-size: 24px;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+}
+
+/* Specific social button colors */
+.social-button--facebook {
+    color: #3b5998;
+}
+.social-button--facebook::after {
+    background: #3b5998;
+}
+.social-button--linkedin {
+    color: #0077b5;
+}
+.social-button--linkedin::after {
+    background: #0077b5;
+}
+.social-button--github {
+    color: #6e5494;
+}
+.social-button--github::after {
+    background: #6e5494;
+}
+.social-button--instagram {
+    color: #E1306C;
+}
+.social-button--instagram::after {
+    background: #E1306C;
+}
+
+footer p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.footer-link{
+    margin: -15px 0 0;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    border: none;
+    background: none;
+  }
+  
+  .footer-link::before {
+    margin-left: auto;
+  }
+  
+  .footer-link::after, .footer-link::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    transition: 0.5s;
+  }
+  
+  .footer-link:hover::after, .footer-link:hover::before {
+    width: 100%;
+  }
+  

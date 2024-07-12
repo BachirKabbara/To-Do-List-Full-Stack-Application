@@ -1,0 +1,196 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.profile-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.profile-edit-btn {
+  padding: 10px 20px;
+  background-color: #FF4B2B;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600; 
+  font-size: 14px;
+}
+
+.profile-edit-btn:hover {
+  background-color: #ff0000;
+}
+
+.profile-info {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.profile-task-settings {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-task-settings p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.profile-card {
+  position: absolute;    /* Fixes the position relative to the viewport */
+  top: 48%;           /* Positions 50% from the top of the viewport */
+  left: 50%;          /* Positions 50% from the left of the viewport */
+  transform: translate(-50%, -50%); /* Centers the card exactly in the middle */
+  width: 100%;        /* Takes the full width to cover different devices */
+  max-width: 640px;   /* Maximum width of the card */
+  min-height: 600px;  /* Minimum height to fit content */
+  border-radius: 14px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 20px 20px 20px #bebebe, -20px -20px 20px #ffffff;
+  background-color: #fff; /* Assuming you want a white background */
+  z-index: 1500;     /* Ensure it's above other content */
+}
+
+
+.profile-bg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 630px;
+  height: 590px;
+  z-index: 2;
+  background: rgba(255, 255, 255, .95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /* Add -webkit-backdrop-filter for Safari */
+  
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid white;
+}
+
+.profile-blob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  background-color: #FF4B2B;
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    background-color:  #FF4B2B;
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    background-color:  #FF416C;
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    background-color: #FF416C;
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    background-color: #FF4B2B;
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}  
+
+.profile-users-list {
+  margin-top: 20px;
+  padding: 10px; 
+  width: 580px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-height: 200px; 
+  overflow-y: auto; 
+}
+
+.profile-users-list h2 {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.profile-users-list ul {
+  list-style-type: none;
+  
+  height: 130px;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.profile-users-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+  color: #555;
+  font-size: 14px;
+}
+
+.profile-users-list li:last-child {
+  border-bottom: none;
+}
+
+.profile-delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.profile-delete-btn:hover {
+  background-color: darkred;
+}

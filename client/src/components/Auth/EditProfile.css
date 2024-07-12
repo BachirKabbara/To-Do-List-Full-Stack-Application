@@ -1,0 +1,163 @@
+/* EditProfile.css */
+.edit-profile__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.edit-profile__dropzone {
+  border: 2px dashed #007bff;
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.edit-profile__dropzone:hover {
+  border-color: #0056b3;
+}
+
+.edit-profile__dropzone p {
+  margin: 0;
+}
+
+.edit-profile__profile-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.edit-profile__remove-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(26, 5, 5, 0.7);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.edit-profile__remove-button:hover {
+  background-color: rgb(222, 17, 17);
+}
+
+label {
+  margin-top: 10px;
+  width: 100%;
+}
+
+input, select {
+  margin-top: 5px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.edit-profile__card {
+  position: absolute;    /* Fixes the position relative to the viewport */
+  top: 48%;           /* Positions 48% from the top of the viewport */
+  left: 50%;          /* Positions 50% from the left of the viewport */
+  transform: translate(-50%, -50%); /* Centers the card exactly in the middle */
+  width: 100%;        /* Takes the full width to cover different devices */
+  max-width: 640px;   /* Maximum width of the card */
+  min-height: 670px;  /* Minimum height to fit content */
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px 10px #bebebe, -10px -10px 10px #ffffff;
+  background-color: #fff; /* Assuming you want a white background */
+  z-index: 1500;     /* Ensure it's above other content */
+}
+
+.edit-profile__bg {
+  position: absolute;
+  padding: 0px 20px 20px 20px;
+  top: 5px;
+  left: 5px;
+  width: 630px;
+  height: 660px;
+  z-index: 2;
+  background: rgba(255, 255, 255);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Add -webkit-backdrop-filter for Safari */
+  
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 1px solid white;
+}
+  
+.edit-profile__blob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  background-color: #FF4B2B;
+  opacity: 1;
+  filter: blur(12px);
+  animation: edit-profile__blob-bounce 5s infinite ease;
+}
+  
+@keyframes edit-profile__blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    background-color:  #FF4B2B;
+  }
+  
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    background-color:  #FF416C;
+  }
+  
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    background-color: #FF416C;
+  }
+  
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    background-color: #FF4B2B;
+  }
+  
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}  
+
+.edit-profile__error {
+  color: red;
+  margin-top: 10px;
+}
+
+.editProfile-edit-button {
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: #FF4B2B;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.editProfile-edit-button:hover {
+  background-color: #ff0000;
+}

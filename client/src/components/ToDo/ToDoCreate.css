@@ -1,0 +1,98 @@
+.todo-create__task-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.todo-create__task-input input,
+.todo-create__task-input select {
+  flex-grow: 1;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  z-index: 3;
+}
+
+.todo-create__title {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800; /* Bold font for the title */
+  font-size: 25px;
+  
+}
+
+.todo-create__button {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #34974d;
+  background-color: #3aa856;
+}
+
+.todo-create__button, .todo-create__button-icon, .todo-create__button-text {
+  transition: all 0.3s;
+}
+
+.todo-create__button .todo-create__button-text {
+  transform: translateX(30px);
+  color: black;
+  font-weight: 600;
+}
+
+.todo-create__button .todo-create__button-icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-create__button .svg {
+  width: 30px;
+  stroke: black;
+}
+
+.todo-create__button:hover {
+  background: #ffffff;
+}
+
+.todo-create__button:hover .todo-create__button-text {
+  color: transparent;
+}
+
+.todo-create__button:hover .todo-create__button-icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.todo-create__button:active .todo-create__button-icon {
+  background-color: #ffffff;
+}
+
+.todo-create__button:active {
+  border: 1px solid #ffffff;
+}
+
+
+.todo-create__task-input button {
+  margin: 15px 40px;
+  padding: 15px 5px;
+  background-color: #ffffff;
+  color: white;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.todo-create__task-input button:hover {
+  background-color: #ffffff;
+}
